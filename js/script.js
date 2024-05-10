@@ -14,12 +14,12 @@ per vedere se è un multiplo uso la formula: numeroA % numeroB = 0 allora è mul
 let output = '';
 for (let i = 1; i <= 100; i++){
 
-if (i % 3 === 0) {
-    output = 'fizz'
+if (i % 3 === 0 && i % 5 === 0) {
+    output = 'fizzBuzz'
 } else if(i % 5 === 0){
     output = 'buzz'
-} else if(i % 3 === 0 && i % 5 === 0){
-    output = 'FizzBuzz'
+} else if(i % 3 === 0){
+    output = 'Fizz'
 } else{
     output = ''
 }

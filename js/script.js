@@ -12,6 +12,7 @@ creare un if (multiplo di 3) {
 
 per vedere se è un multiplo uso la formula: numeroA % numeroB = 0 allora è multiplo; */
 let output = '';
+const ulElement = document.querySelector('ul');
 for (let i = 1; i <= 100; i++){
 
 if (i % 3 === 0 && i % 5 === 0) {
@@ -21,7 +22,14 @@ if (i % 3 === 0 && i % 5 === 0) {
 } else if(i % 3 === 0){
     output = 'Fizz'
 } else{
-    output = ''
+    output = i;
 }
-    console.log(i, output)
+    console.log(output)
+    
+    const liElement = document.createElement('li');
+    liElement.classList.add('list-item');
+    liElement.append(output);
+
+    ulElement.appendChild(liElement);
 }
+
